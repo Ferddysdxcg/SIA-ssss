@@ -34,6 +34,10 @@ nav {
     transition: background-color 0.3s ease;
 }
 
+a {
+    text-decoration: none;
+}
+
 nav.scrolled {
     background-color: rgba(43, 43, 43, 0.92); /* var(--color-bg-dark) + opacity */
 }
@@ -123,7 +127,6 @@ section.hero {
 section.hero h1 {
     text-align: left;
     font-size: 66px;
-    margin-bottom: 20px;
     position: relative;
     z-index: 1;
 }
@@ -177,6 +180,7 @@ button {
     border-radius: 4px;
     cursor: pointer;
     transition: background 0.2s;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -184,13 +188,23 @@ button:hover {
 }
 
 .line {
-    text-align: left;
+    align-self: flex-start;
     width: 50%;
     height: 2px;
     border-radius: 5px;
     background-color: var(--color-muted);
 }
 
+.hero-left .highlight {
+    color: var(--color-bg-dark);      
+    background-color: var(--color-accent);    
+    font-weight: 700;
+    padding: 0 8px;
+    border-radius: 4px;
+    box-decoration-break: clone;
+    font-size: 2.5rem; /* lebih kecil dari h1, tetap menonjol */
+    display: inline-block;
+}
 
 .building-img {
     position: absolute;

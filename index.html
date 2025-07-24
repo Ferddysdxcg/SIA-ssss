@@ -16,8 +16,10 @@
 <body>
     <nav>
         <div class="logo">
-            <h1>ACADEMIC</h1>
-            <span>STUDENT</span>
+            <a href="#hero">
+                <h1>ACADEMIC</h1>
+                <span>STUDENT</span>
+            </a>
         </div>
         <ul>
             <li><a href="">Home</a></li>
@@ -27,10 +29,12 @@
             <li><a href="">Login</a></li>
         </ul>
     </nav>
-    <section class="hero">
-        <img src="https://plus.unsplash.com/premium_photo-1661340695541-ee1ca7efedd0?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="building-img" alt="Building" />
+    <section class="hero" id="hero">
+        <img src="https://plus.unsplash.com/premium_photo-1661340695541-ee1ca7efedd0?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            class="building-img" alt="Building" />
         <div class="hero-left">
-            <h1>Welcome to the <br>Student Information System</h1>
+            <h1>Welcome to the</h1>
+            <p class="highlight">Student Information System</p>
         </div>
 
 
@@ -40,10 +44,10 @@
                 <form action="">
                     <h2>LOGIN - STUDENT</h2>
                     <hr class="line" />
-                    <label for="nim">NIM atau Email :</label>
-                    <input type="text" placeholder="NIM atau email" required>
+                    <label for="nim">NIM/Email :</label>
+                    <input type="text" placeholder="Masukan NIM atau Email" required>
                     <label for="password">Password :</label>
-                    <input type="password" placeholder="password" required>
+                    <input type="password" placeholder="Masukan Password Anda" required>
                     <button type="submit">Login</button>
 
                 </form>
