@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h1>ACADEMIC</h1>
+            <span>STUDENT</span>
+        </div>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li>
+                <div class="badge"></div><a href="">News</a>
+            </li>
+            <li><a href="">Login</a></li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <img src="https://plus.unsplash.com/premium_photo-1661340695541-ee1ca7efedd0?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="building-img" alt="Building" />
+        <div class="hero-left">
+            <h1>Welcome to the <br>Student Information System</h1>
+        </div>
+
+
+        <div class="hero-right">
+
+            <div class="login">
+                <form action="">
+                    <h2>LOGIN - STUDENT</h2>
+                    <hr class="line" />
+                    <label for="nim">NIM atau Email :</label>
+                    <input type="text" placeholder="NIM atau email" required>
+                    <label for="password">Password :</label>
+                    <input type="password" placeholder="password" required>
+                    <button type="submit">Login</button>
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="news">
+        <div class="news-ac">
+            <h1>BIRO AKADEMIK</h1>
+            <div class="isi-news-ac">
+                <h4 id="tanggal">Tanggal : 2025-12-12</h4>
+                <p id="judul"><strong>Judul :</strong> Pengumuman Ujian Akhir Semester</p>
+                <span class="isi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quia.</span>
+            </div>
+        </div>
+        <div class="news-uang">
+            <h1>BIRO KEUANGAN</h1>
+            <div class="isi-news-uang">
+                <h4 id="tanggal-uang">Tanggal : 2025-12-15</h4>
+                <p id="judul-uang"><strong>Judul :</strong> Pengumuman Pembayaran UKT</p>
+                <span class="isi">Pembayaran UKT semester genap dibuka mulai tanggal 20 Desember 2025.</span>
+            </div>
+        </div>
+        <div class="news-mhs">
+            <h1>BIRO MAHASISWA</h1>
+            <div class="isi-news-mhs">
+                <h4 id="tanggal-mhs">Tanggal : 2025-12-18</h4>
+                <p id="judul-mhs"><strong>Judul :</strong> Pendaftaran Organisasi Mahasiswa</p>
+                <span class="isi">Pendaftaran organisasi mahasiswa dibuka hingga 31 Desember 2025.</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <p>&copy; 2025 SIA. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </section>
+    <script>
+        window.addEventListener('scroll', function () {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>
