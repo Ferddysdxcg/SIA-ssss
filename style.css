@@ -5,18 +5,18 @@
 }
 
 :root {
-    --color-primary: #1e90ff;
-    --color-primary-dark: #1c7ed6;
-    --color-bg-dark: #2b2b2b;
-    --color-text-light: #ffffff;
-    --color-muted: #cccccc;
-    --color-accent: #64dfdf;
+    --primary: #1e90ff;
+    --primary-dark: #1c7ed6;
+    --bg-dark: #2b2b2b;
+    --text-light: #ffffff;
+    --muted: #cccccc;
+    --accent: #64dfdf;
 }
 
 body {
     font-family: 'Montserrat', 'Poppins', sans-serif;
-    background-color: var(--color-bg-dark);
-    color: var(--color-text-light);
+    background-color: var(--bg-dark);
+    color: var(--text-light);
 }
 
 html {
@@ -24,8 +24,8 @@ html {
 }
 
 ::selection {
-    background: var(--color-accent);
-    color: var(--color-bg-dark);
+    background: var(--accent);
+    color: var(--bg-dark);
 }
 
 nav {
@@ -33,7 +33,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-    color: var(--color-text-light);
+    color: var(--text-light);
     position: fixed;
     width: 100%;
     padding: 15px 20px;
@@ -45,21 +45,22 @@ nav {
 
 a {
     text-decoration: none;
+    color: var(--text-light);
 }
 
 nav.scrolled {
-    background-color: rgba(43, 43, 43, 0.92); /* var(--color-bg-dark) + opacity */
+    background-color: rgba(43, 43, 43, 0.92); /* var(--bg-dark) + opacity */
 }
 
 nav .logo h1 {
     font-size: 24px;
     font-weight: bold;
-    color: var(--color-primary);
+    color: var(--primary);
 }
 
 nav .logo span {
     letter-spacing: 10px;
-    color: var(--color-accent);
+    color: var(--accent);
 }
 
 nav ul {
@@ -72,32 +73,32 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--color-text-light);
+    color: var(--text-light);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: var(--color-accent);
+    color: var(--accent);
 }
 
 .badge {
     display: inline-block;
     width: 10px;
     height: 10px;
-    background-color: var(--color-accent);
+    background-color: var(--accent);
     border-radius: 50%;
     margin-right: 6px;
 }
 
 section.hero {
     position: relative;
-    background-color: var(--color-bg-dark);
+    background-color: var(--bg-dark);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--color-text-light);
+    color: var(--text-light);
     text-align: center;
     padding: 5%;
     overflow: hidden;
@@ -129,7 +130,7 @@ section.hero::before {
 .hero-left h1 {
     position: relative;
     z-index: 1;
-    color: var(--color-text-light);
+    color: var(--text-light);
     text-shadow: 0 2px 8px rgba(30,30,30,0.18);
     font-size: 2.8rem;
     font-weight: 700;
@@ -142,8 +143,8 @@ section.hero::before {
 }
 
 .hero-left .highlight {
-    color: var(--color-bg-dark);
-    background-color: var(--color-accent);
+    color: var(--bg-dark);
+    background-color: var(--accent);
     font-weight: 700;
     padding: 6px 16px 2px 16px; /* padding atas lebih besar */
     border-radius: 8px;
@@ -169,8 +170,8 @@ section.hero h1 {
 }
 
 .login {
-    color: var(--color-bg-dark);
-    background-color: var(--color-text-light);
+    color: var(--bg-dark);
+    background-color: var(--text-light);
     box-shadow: 0 2px 10px rgba(30, 144, 255, 0.08);
     border-radius: 8px;
     padding: 30px;
@@ -189,21 +190,21 @@ form {
 
 form h2 {
     text-align: center;
-    color: var(--color-primary-dark);
+    color: var(--primary-dark);
 }
 
 input {
     padding: 10px;
     font-size: 16px;
     width: 100%;
-    border: 1px solid var(--color-muted);
+    border: 1px solid var(--muted);
     border-radius: 4px;
-    background: var(--color-muted);
-    color: var(--color-bg-dark);
+    background: var(--muted);
+    color: var(--bg-dark);
 }
 
 input:focus {
-    border-color: var(--color-primary);
+    border-color: var(--primary);
     outline: none;
 }
 
@@ -211,8 +212,8 @@ button {
     padding: 10px;
     font-size: 16px;
     width: 100%;
-    background-color: var(--color-primary);
-    color: var(--color-text-light);
+    background-color: var(--primary);
+    color: var(--text-light);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -221,7 +222,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--color-primary-dark);
+    background-color: var(--primary-dark);
 }
 
 .line {
@@ -229,7 +230,7 @@ button:hover {
     width: 50%;
     height: 2px;
     border-radius: 5px;
-    background-color: var(--color-muted);
+    background-color: var(--muted);
 }
 
 
@@ -263,18 +264,18 @@ section.news {
 .news-ac,
 .news-uang,
 .news-mhs {
-    background-color: var(--color-muted);
-    color: var(--color-bg-dark);
+    background-color: var(--muted);
+    color: var(--bg-dark);
     border-radius: 5px;
     max-width: 500px;
     max-height: 700px;
 }
 
 .news h1 {
-    background-color: var(--color-primary-dark);
+    background-color: var(--primary-dark);
     border-radius: 5px 5px 0 0;
     padding: 5px;
-    color: var(--color-text-light);
+    color: var(--text-light);
 }
 
 .isi-news-ac,
@@ -285,14 +286,14 @@ section.news {
 
 hr {
     border: none;
-    border-top: 1.5px solid var(--color-primary-dark);
+    border-top: 1.5px solid var(--primary-dark);
     margin: 16px 0;
     opacity: 0.15;
 }
 
 section.footer {
-    color: var(--color-bg-dark);
-    background-color: var(--color-muted); /* lebih kontras dan tetap palet */
+    color: var(--bg-dark);
+    background-color: var(--muted); /* lebih kontras dan tetap palet */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -316,12 +317,42 @@ section.footer .social-media {
 }
 
 section.footer .social-media a {
-    color: var(--color-bg-dark);
+    color: var(--bg-dark);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s;
 }
 
 section.footer .social-media a:hover {
-    color: var(--color-primary);
+    color: var(--primary);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--muted);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--bg-dark);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--bg-dark);
+    color: var(--primary-dark);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
