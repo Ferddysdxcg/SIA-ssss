@@ -5,272 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIA - BERANDA</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        :root {
-            --primary: #1e90ff;
-            --primary-dark: #1c7ed6;
-            --bg-dark: #2b2b2b;
-            --text-light: #ffffff;
-            --muted: #cccccc;
-            --accent: #64dfdf;
-            --alert: #ffcece;
-        }
-
-        body {
-            font-family: 'Montserrat', 'Poppins', sans-serif;
-            background-color: var(--text-light);
-            color: var(--bg-dark);
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        ::selection {
-            background: var(--accent);
-            color: var(--bg-dark);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: var(--primary);
-            color: var(--text-light);
-            position: fixed;
-            width: 100%;
-            height: 70px;
-            padding: 15px 20px;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            transition: background-color 0.3s ease;
-        }
-
-        a {
-            text-decoration: none;
-            color: var(--bg-dark);
-        }
-
-        nav .logo h1 {
-            font-size: 27px;
-            font-weight: bold;
-            color: var(--bg-dark);
-        }
-
-        nav .logo span {
-            letter-spacing: 1px;
-            color: var(--bg-dark);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a,
-        .dropdown p {
-            color: var(--text-light);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .dropdown p:hover {
-            color: var(--bg-dark);
-        }
-
-        /* #TODO pas masuk dropdown color berubah */
-        .dropdown p:active {
-            color: var(--bg-dark);
-        }
-
-        nav ul li a:hover {
-            color: var(--bg-dark);
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: var(--text-light);
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: var(--bg-dark);
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: var(--bg-dark);
-            color: var(--primary-dark);
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        p,
-        span {
-            color: #2b2b2b;
-        }
-
-        .dashboard {
-            margin: 90px 1% auto 1%;
-            height: auto;
-        }
-
-        .t {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-        }
-
-        .label-bc {
-            border-left: 10px solid var(--primary);
-            /* #NOTE : warna border sesuai jurusan */
-            padding: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-
-        }
-
-        .breadcrumb {
-            font-size: 26px;
-        }
-
-        .block-pay {
-            display: flex;
-            flex-direction: row;
-            background-color: var(--alert);
-            padding: 5px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-            /* flex-wrap: wrap; */
-        }
-
-        .logo-alert {
-            /* background-color: #1c7ed6; */
-            flex-grow: 1;
-            font-size: 50px;
-            padding: 5px 10px;
-            /* color: yellow; */
-        }
-
-        .block-text {
-            flex-grow: 5;
-            padding: 5px 10px;
-            border-left: 5px solid var(--text-light);
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        th,
-        .div4 h4 {
-            padding: 8px;
-            text-align: center;
-            background-color: var(--primary);
-            border-bottom: 1px solid #ddd;
-        }
-
-        td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-            margin: 15px;
-        }
-
-        /* .info {
-            margin: 10px;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .info-ac {
-            border: 2px solid var(--primary);
-            border-radius: 5px;
-        } */
-
-        .info {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            grid-template-rows: auto 1fr;
-            grid-template-areas:
-                "div1 div3"
-                "div1 div4";
-            gap: 18px;
-            margin: 40px 20px 20px;
-        }
-
-        .div1 {
-            grid-area: div1;
-            border: 2px solid var(--primary);
-            border-radius: 5px;
-            height: 100%;
-        }
-
-        .div3 {
-            grid-area: div3;
-            border: 2px solid var(--primary);
-            border-radius: 5px;
-        }
-
-        .div4 {
-            grid-area: div4;
-            border: 2px solid var(--primary);
-            border-radius: 5px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            height: 100%;
-        }
-
-        .highlight-pr {
-            background-color: var(--primary);
-            width: 100%;
-            border-radius: 5px;
-            padding: 5px 10%;
-            font-weight: bold;
-        }
-
-        .highlight-ac {
-            background-color: var(--bg-dark);
-            width: 100%;
-            border-radius: 5px;
-            padding: 5px 10%;
-            color: var(--accent);
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="mystyle.css">
+    <!-- <script src="https://unpkg.com/feather-icons"></script> -->
 </head>
 
 <body>
@@ -282,24 +18,24 @@
             </a>
         </div>
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#"> <i data-feather="home"></i>Home</a></li>
 
             <li>
                 <div class="dropdown">
-                    <p>Data Akademik</p>
+                    <p><i data-feather="book"></i>Data Akademik</p>
                     <div class="dropdown-content">
-                        <a href="#">KRS/Rencana Studi</a>
-                        <a href="#">KHS/Hasil Studi</a>
-                        <a href="#">Daftar Nilai</a>
+                        <a href="krs.html">KRS/Rencana Studi</a>
+                        <a href="khs.html">KHS/Hasil Studi</a>
+                        <a href="daftarnilai.html">Daftar Nilai</a>
                     </div>
                 </div>
             </li>
 
-            <li><a href="#reg">Registrasi</a></li>
+            <li><a href="reg.html"><i data-feather="archive"></i>Registrasi</a></li>
 
             <li>
                 <div class="dropdown">
-                    <p>Profile <span>(202401000)</span></p>
+                    <p><i data-feather="user"></i>Profile <span>(202401000)</span></p>
                     <div class="dropdown-content">
                         <a href="#">Biodata</a>
                         <a href="#">Ubah Password</a>
@@ -423,7 +159,9 @@
         });
     </script>
 
-
+    <script>
+        feather.replace();
+    </script>
 </body>
 
 </html>
