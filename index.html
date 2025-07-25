@@ -11,37 +11,43 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 
 <body>
     <nav>
-        <div class="logo">
+        <div class="logo" data-aos="fade-in">
             <a href="#hero">
                 <h1>ACADEMIC</h1>
                 <span>STUDENT</span>
             </a>
         </div>
-        <ul>
-            <li><a href="">Home</a></li>
+        <!-- <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-toggle-label" data-aos="fade-in">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label> -->
+        <ul data-aos="fade-in">
+            <li><a href="#hero">Home</a></li>
             <li>
-                <div class="badge"></div><a href="">News</a>
+                <div class="badge"></div><a href="#news">News</a>
             </li>
-            <li><a href="">Login</a></li>
+            <li><a href="#hero">Login</a></li>
         </ul>
     </nav>
-    <section class="hero" id="hero">
+    <section class="hero" id="hero" data-aos="fade-in">
         <img src="https://plus.unsplash.com/premium_photo-1661340695541-ee1ca7efedd0?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            class="building-img" alt="Building" />
-        <div class="hero-left">
-            <h1>Welcome to the</h1>
-            <p class="highlight">Student Information System</p>
+            class="building-img" alt="Building" data-aos="fade-in" />
+        <div class="hero-left" data-aos="fade-in">
+            <h1>
+                Welcome to the<br>
+                <span class="highlight">Student Information System</span>
+            </h1>
         </div>
-
-
-        <div class="hero-right">
-
-            <div class="login">
-                <form action="">
+        <div class="hero-right" data-aos="fade-in">
+            <div class="login" data-aos="fade-in">
+                <form action="" data-aos="fade-in">
                     <h2>LOGIN - STUDENT</h2>
                     <hr class="line" />
                     <label for="nim">NIM/Email :</label>
@@ -49,44 +55,66 @@
                     <label for="password">Password :</label>
                     <input type="password" placeholder="Masukan Password Anda" required>
                     <button type="submit">Login</button>
-
                 </form>
             </div>
         </div>
     </section>
-    <section class="news">
-        <div class="news-ac">
+    <section class="news" id="news" data-aos="fade-in">
+        <div class="news-ac" data-aos="fade-in">
             <h1>BIRO AKADEMIK</h1>
-            <div class="isi-news-ac">
-                <h4 id="tanggal">Tanggal : 2025-12-12</h4>
-                <p id="judul"><strong>Judul :</strong> Pengumuman Ujian Akhir Semester</p>
-                <span class="isi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quia.</span>
+            <div class="isi-news-ac" data-aos="fade-in">
+                <h4 id="tanggal">2025-12-12</h4>
+                <p id="judul"><strong>Pengumuman Ujian Akhir Semester</strong></p>
+                <span class="isi">Ujian akhir semester akan dilaksanakan mulai 20 Desember 2025.</span>
+                <hr>
+                <h4 id="tanggal2">2025-12-15</h4>
+                <p id="judul2"><strong>Libur Semester</strong></p>
+                <span class="isi">Libur semester dimulai tanggal 1 Januari 2026.</span>
+                <hr>
+                <h4 id="tanggal3">2025-12-18</h4>
+                <p id="judul3"><strong>Pengambilan KHS</strong></p>
+                <span class="isi">KHS dapat diambil di biro akademik mulai 5 Januari 2026.</span>
             </div>
         </div>
-        <div class="news-uang">
+        <div class="news-uang" data-aos="fade-in">
             <h1>BIRO KEUANGAN</h1>
-            <div class="isi-news-uang">
-                <h4 id="tanggal-uang">Tanggal : 2025-12-15</h4>
-                <p id="judul-uang"><strong>Judul :</strong> Pengumuman Pembayaran UKT</p>
+            <div class="isi-news-uang" data-aos="fade-in">
+                <h4 id="tanggal-uang">2025-12-15</h4>
+                <p id="judul-uang"><strong>Pengumuman Pembayaran UKT</strong></p>
                 <span class="isi">Pembayaran UKT semester genap dibuka mulai tanggal 20 Desember 2025.</span>
+                <hr>
+                <h4 id="tanggal-uang2">2025-12-20</h4>
+                <p id="judul-uang2"><strong>Perubahan Nomor Rekening</strong></p>
+                <span class="isi">Nomor rekening pembayaran UKT telah diperbarui, cek website resmi.</span>
+                <hr>
+                <h4 id="tanggal-uang3">2025-12-22</h4>
+                <p id="judul-uang3"><strong>Pengajuan Keringanan UKT</strong></p>
+                <span class="isi">Pengajuan keringanan UKT dibuka hingga 5 Januari 2026.</span>
             </div>
         </div>
-        <div class="news-mhs">
+        <div class="news-mhs" data-aos="fade-in">
             <h1>BIRO MAHASISWA</h1>
-            <div class="isi-news-mhs">
-                <h4 id="tanggal-mhs">Tanggal : 2025-12-18</h4>
-                <p id="judul-mhs"><strong>Judul :</strong> Pendaftaran Organisasi Mahasiswa</p>
+            <div class="isi-news-mhs" data-aos="fade-in">
+                <h4 id="tanggal-mhs">2025-12-18</h4>
+                <p id="judul-mhs"><strong>Pendaftaran Organisasi Mahasiswa</strong></p>
                 <span class="isi">Pendaftaran organisasi mahasiswa dibuka hingga 31 Desember 2025.</span>
+                <hr>
+                <h4 id="tanggal-mhs2">2025-12-21</h4>
+                <p id="judul-mhs2"><strong>Beasiswa Prestasi</strong></p>
+                <span class="isi">Pendaftaran beasiswa prestasi dibuka sampai 10 Januari 2026.</span>
+                <hr>
+                <h4 id="tanggal-mhs3">2025-12-25</h4>
+                <p id="judul-mhs3"><strong>Pelatihan Softskill</strong></p>
+                <span class="isi">Pelatihan softskill akan diadakan pada 15 Januari 2026 di aula kampus.</span>
             </div>
         </div>
     </section>
-
     <section class="footer">
         <p>&copy; 2025 SIA. All rights reserved.</p>
-        <div class="social-media">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
+        <div class="social-media" data-aos="fade-in">
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://www.twitter.com" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
         </div>
     </section>
     <script>
@@ -99,6 +127,13 @@
             }
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 700,
+    once: true
+  });
+</script>
 </body>
 
 </html>

@@ -19,6 +19,15 @@ body {
     color: var(--color-text-light);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background: var(--color-accent);
+    color: var(--color-bg-dark);
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -82,6 +91,7 @@ nav ul li a:hover {
 }
 
 section.hero {
+    position: relative;
     background-color: var(--color-bg-dark);
     height: 100vh;
     display: flex;
@@ -90,14 +100,23 @@ section.hero {
     color: var(--color-text-light);
     text-align: center;
     padding: 5%;
-    position: relative;
+    overflow: hidden;
+}
+
+section.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('https://plus.unsplash.com/premium_photo-1661340695541-ee1ca7efedd0?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+    opacity: 0.2;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .hero-left,
 .hero-right {
-    flex: 1;
-    min-width: 300px;
-    /* biar nggak terlalu kecil pas mobile */
+    position: relative;
+    z-index: 1;
 }
 
 .hero-left {
@@ -111,12 +130,30 @@ section.hero {
     position: relative;
     z-index: 1;
     color: var(--color-text-light);
-    text-shadow: 0 2px 8px rgba(30,30,30,0.25);
-    font-size: 3.5rem;
+    text-shadow: 0 2px 8px rgba(30,30,30,0.18);
+    font-size: 2.8rem;
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 0;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
+
+.hero-left .highlight {
+    color: var(--color-bg-dark);
+    background-color: var(--color-accent);
+    font-weight: 700;
+    padding: 6px 16px 2px 16px; /* padding atas lebih besar */
+    border-radius: 8px;
+    box-decoration-break: clone;
+    font-size: 2.1rem;
+    display: inline-block;
+    margin-top: -5px; /* naik ke atas, lebih menyatu */
+    letter-spacing: 0.5px;
+}
+
 
 .hero-right {
     flex: 1;
@@ -195,16 +232,6 @@ button:hover {
     background-color: var(--color-muted);
 }
 
-.hero-left .highlight {
-    color: var(--color-bg-dark);      
-    background-color: var(--color-accent);    
-    font-weight: 700;
-    padding: 0 8px;
-    border-radius: 4px;
-    box-decoration-break: clone;
-    font-size: 2.5rem; /* lebih kecil dari h1, tetap menonjol */
-    display: inline-block;
-}
 
 .building-img {
     position: absolute;
@@ -217,4 +244,84 @@ button:hover {
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
     z-index: 0;
     opacity: 0.9;
+}
+
+section.news {
+    /* background-color: #ffffff; */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin: 40px 0;
+    /* padding: 10px; */
+    /* gap: 10px; */
+    flex-wrap: wrap;
+}
+
+.news-ac,
+.news-uang,
+.news-mhs {
+    background-color: var(--color-muted);
+    color: var(--color-bg-dark);
+    border-radius: 5px;
+    max-width: 500px;
+    max-height: 700px;
+}
+
+.news h1 {
+    background-color: var(--color-primary-dark);
+    border-radius: 5px 5px 0 0;
+    padding: 5px;
+    color: var(--color-text-light);
+}
+
+.isi-news-ac,
+.isi-news-uang,
+.isi-news-mhs {
+    padding: 10px;
+}
+
+hr {
+    border: none;
+    border-top: 1.5px solid var(--color-primary-dark);
+    margin: 16px 0;
+    opacity: 0.15;
+}
+
+section.footer {
+    color: var(--color-bg-dark);
+    background-color: var(--color-muted); /* lebih kontras dan tetap palet */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 32px;
+    font-size: 1rem;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 -2px 12px rgba(30, 144, 255, 0.08);
+    margin-top: 40px;
+    position: relative;
+    z-index: 10;
+}
+
+section.footer p {
+    margin: 0;
+    font-weight: 500;
+}
+
+section.footer .social-media {
+    display: flex;
+    gap: 18px;
+}
+
+section.footer .social-media a {
+    color: var(--color-bg-dark);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+section.footer .social-media a:hover {
+    color: var(--color-primary);
 }
